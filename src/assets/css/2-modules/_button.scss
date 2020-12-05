@@ -1,0 +1,77 @@
+// Button
+.btn-accent {
+  background: $accent-color;
+  border-radius: 0;
+  padding: 10px 15px;
+  color: $white-color;
+  font-size: 12px;
+  @extend  %font-weight;
+  transition: all .1s ease-in-out;
+  @include font('Montserrat');
+
+  &:hover {
+    color: $white-color;
+    background: lighten($accent-color, 8%);
+  }
+}
+
+.btn-accent-1 {
+  background: $accent-color;
+  border-radius: 0;
+  border: 8px solid $primary-color;
+  padding: 10px 15px;
+  color: $white-color;
+  font-size: 12px;
+  @extend  %font-weight;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    color: $white-color;
+    background: lighten($accent-color, 8%);
+  }
+}
+
+.btn-register {
+  background: #3b5998;
+  border-radius: 0;
+  padding: 10px 30px;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $white-color;
+  }
+
+  i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+}
+
+.btn-grey {
+  background: #f3f3f3;
+  border-radius: 0;
+  padding: 10px 15px;
+  color: $text-color;
+  @extend %font-weight;
+}
+
+// Button Tag
+.btn-tag {
+  font-size: 12px;
+  line-height: 24px;
+  background: $tag-bg;
+  color: $text-color6;
+  padding: 10px;
+  margin: 7px 7px 0 0;
+  border-radius: 0;
+  @extend %font-weight;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background: $accent-color;
+    color: $white-color;
+  }
+}

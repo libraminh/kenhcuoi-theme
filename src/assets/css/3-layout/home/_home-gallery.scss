@@ -1,0 +1,47 @@
+.home-gallery {
+  &-carousel {
+    .item {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    &-content {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: 120;
+      padding: 20px;
+
+      h3 {
+        color: $white-color;
+        font-size: 20px;
+        line-height: 30px;
+        @extend %font-weight;
+        transition: all .2s ease-in-out;
+        margin-bottom: 5px;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      .home-showcase-date {
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+
+
+  &-direction {
+    margin-top: 15px;
+  }
+}

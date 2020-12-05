@@ -1,0 +1,47 @@
+.register-showcase {
+  &-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+
+    small {
+      @include font('Roboto');
+    }
+  }
+
+  &-wrap-form {
+    @include font('Roboto');
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input {
+      border-radius: 0;
+      box-shadow: none;
+      padding: 20px 15px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: #ccc;
+      }
+    }
+
+    .btn-accent {
+      margin-top: 10px;
+    }
+
+    .license {
+      font-weight: 500;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text-color9;
+    }
+  }
+}

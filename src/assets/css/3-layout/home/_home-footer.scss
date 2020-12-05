@@ -1,0 +1,107 @@
+.footer {
+  color: $text-color4;
+  background: $footer-bg;
+  margin-top: 50px;
+  padding-top: 40px;
+  @include font('Roboto');
+
+  h3 {
+    font-size: 20px;
+    color: $text-color3;
+    @extend %font-weight;
+    @include font('Montserrat');
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .footer-nav {
+    margin-top: 25px;
+
+    li {
+      padding: 10px 0;
+      border-top: 1px solid $border-color1;
+    }
+
+    i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+
+    }
+  }
+
+  .footer-nav-service {
+    a {
+      color: $text-color4;
+
+      &:hover {
+        color: $text-color7;
+      }
+
+      &:hover i {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &-connect {
+    .footer-wrap-box {
+      overflow: hidden;
+      margin: 5px 0;
+    }
+
+    img {
+      width: 100%;
+      transition: all .2s ;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .footer-copyright {
+    color: $text-color4;
+    background: $copyright-bg;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 60px;
+    @include font('Montserrat');
+
+    .row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .copycat {
+      font-size: 14px;
+    }
+
+    .copyright-nav {
+      margin: 0;
+
+      li {
+        display: inline-table;
+
+        &:last-child a {
+          border-right: none;
+        }
+      }
+
+      a {
+        font-size: 12px;
+        line-height: 25px;
+        color: $text-color4;
+        padding-right: 6px;
+        padding-left: 3px;
+        border-right: 1px solid $text-color4;
+        @include hoverColor($accent-color);
+      }
+    }
+  }
+
+}

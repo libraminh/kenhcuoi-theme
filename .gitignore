@@ -1,0 +1,10 @@
+# compiled output
+/dist
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+jspm_packages/

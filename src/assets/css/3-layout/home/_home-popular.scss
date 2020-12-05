@@ -1,0 +1,34 @@
+.home-popular {
+  &-date {
+    @include font('Roboto');
+    color: $text-color1;
+
+    i {
+      margin: 0 3px;
+    }
+  }
+
+  .col-md-12 {
+    margin-bottom: 20px;
+  }
+
+  .media {
+    margin-bottom: 5px;
+  }
+
+  .media-object {
+    margin-right: 10px;
+  }
+
+  .media-heading {
+    color: $text-color3;
+    font-size: 14px;
+    line-height: 24px;
+    transition: all .2s ease-in-out;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}

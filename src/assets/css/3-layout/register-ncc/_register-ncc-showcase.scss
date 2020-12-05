@@ -1,0 +1,24 @@
+.register-ncc-showcase {
+  .another {
+    width: 385px;
+    float: right;
+  }
+
+  small {
+    @include font('Roboto');
+  }
+
+  .btn-group.bootstrap-select {
+    width: 568px;
+    display: block;
+  }
+
+  button.btn.dropdown-toggle.bs-placeholder.btn-default {
+    border-radius: 0;
+    padding: 10px 17px;
+  }
+
+  .register-showcase-wrap-form {
+    @include font('Roboto');
+  }
+}

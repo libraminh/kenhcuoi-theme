@@ -1,0 +1,87 @@
+.home-showcase {
+  &-wrap {
+    position: relative;
+
+    &-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $white-color;
+      padding: 10px 12px;
+      background: rgba(black,0.8);
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+
+  &-thumb {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &-title {
+
+    h3 {
+      color: $text-color;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 20px 0 5px;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &-date {
+    color: $text-color1;
+  }
+
+  &-content {
+    @include font('Roboto');
+    color: $text-color2;
+    margin: 15px 0 20px;
+  }
+
+  .media {
+    margin-bottom: 30px;
+
+    .media-left {
+      padding-right: 20px;
+    }
+
+    .media-heading {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    a {
+      color: $text-color;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    small {
+      color: $text-color2;
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  .post-list-content {
+    .col-md-8 {
+      p {
+        @include font('Roboto');
+        font-size: 14px;
+        line-height: 24px;
+        color: $text-color9;
+      }
+    }
+
+  }
+
+}
