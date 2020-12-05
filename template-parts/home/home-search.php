@@ -6,11 +6,14 @@
           <h4 class="home-search-wrap-title text-accent">TÌM KIẾM <strong>NHÀ CUNG CẤP</strong></h4>
         </div>
         <div class="col-md-3 col">
+
           <form>
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Nhập từ khóa...">
+              <!-- <input class="form-control" type="text" placeholder="Nhập từ khóa..."> -->
+              <input class="form-control" name="s" id="search" type="text" value="<?php the_search_query(); ?>" placeholder="Nhập từ khóa...">
             </div>
           </form>
+
         </div>
         <div class="col-md-2 col">
           <form>

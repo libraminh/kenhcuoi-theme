@@ -57,14 +57,6 @@ require get_template_directory() . '/inc/query-posts-tax.php';
           <?php get_template_part( 'template-parts/global/main', 'sidebar'); ?>
         </div>
       </div>
-
-      <div class="margin-box"></div>
-
-      <?php get_template_part( 'template-parts/home/home', 'sale'); ?>
-
-      <div class="margin-box"></div>
-
-      <?php get_template_part( 'template-parts/home/home', 'subscribe'); ?>
     </div>
   </div>
 <?php

@@ -1,8 +1,11 @@
 <div class="col-md-6">
   <div class="media">
     <div class="media-left">
+      <?php 
+        require get_template_directory() . '/inc/post-thumbnail-alt.php';
+      ?>
       <a href="<?php the_permalink();?>">
-        <img style="width: 170px; height: 125px; object-fit: cover; object-position: center;" class="media-object" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
+        <img style="width: 170px; height: 125px; object-fit: cover; object-position: center;" class="media-object" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
       </a>
     </div>  
 

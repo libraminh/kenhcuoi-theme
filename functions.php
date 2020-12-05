@@ -260,3 +260,15 @@ function awts_get_widget_id($widget_instance) {
 
 add_action('in_widget_form', 'awts_get_widget_id');
 
+function excerpt_custom( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'excerpt_custom', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+	if ( is_admin() ) {
+		return $more;
+	}
+	return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

@@ -10,6 +10,16 @@
  */
 
 ?>
+		<div class="container">
+			<div class="margin-box"></div>
+
+			<?php get_template_part( 'template-parts/home/home', 'sale'); ?>
+
+			<div class="margin-box"></div>
+
+			<?php get_template_part( 'template-parts/home/home', 'subscribe'); ?>
+		</div>
+
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
