@@ -1,9 +1,12 @@
 <?php 
+  $taxo_name = 'khuyen_mai';
+  $term = 'uncategorized';
   $the_query = new WP_Query( array(
     'post_type' => 'post',
+    'posts_per_page' => '8',
     'tax_query' => array(
       array(
-        'taxonomy' => 'khuyen_mai',
+        'taxonomy' => $taxo_name,
         'field' => 'slug',
         'terms' => array('uncategorized'),
       )
@@ -34,8 +37,11 @@
   </div>
   
   <div class="show-all">
-    <a href="#">
-      <h5 class="text-uppercase"><strong>Xem Tất Cả</strong></h5>
+    <a href="<?php echo $taxo_name . '/' . $term; ?>">
+      <h5 class="text-uppercase">
+        <strong>Xem Tất Cả</strong>
+      </h5>
     </a>
   </div>
+  
 </section>

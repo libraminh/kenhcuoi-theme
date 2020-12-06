@@ -2,7 +2,7 @@
 /**
  * Template Name: Home Page
  * The template for displaying front page
- *
+ * Template Post Type: post, page
  */
 
 get_header();

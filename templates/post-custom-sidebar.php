@@ -2,7 +2,7 @@
 /**
  * Template Name: Custom Post Layout
  * The template for single post
- * Template Post Type: post
+ * Template Post Type: post, video
  */
 
 get_header();

@@ -12,7 +12,7 @@
 
       <?php  if (is_archive()) : ?>
       <div class="container">
-        <h3 class="text-uppercase carousel-title"><?php echo $cate_name; ?></h3>
+        <h3 class="text-uppercase carousel-title"><?php if(!empty($cate_name)) echo $cate_name; ?></h3>
       </div>
       <?php endif; ?>
     </div>

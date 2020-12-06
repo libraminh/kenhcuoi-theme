@@ -7,7 +7,7 @@
     ) );
 
     $queryTerms = array();
-  
+
     foreach($terms as $term) {
       array_push($queryTerms, $term->slug);
     }
