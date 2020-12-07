@@ -7,15 +7,16 @@
 
   <div class="row">
     <?php 
-      $query_taxo = 'dich_vu';
+      $query_taxonomy = 'dich_vu';
+      // $post_type = 'services';
       $args = array(
         'orderby' => 'name',
         'order'   => 'ASC',
-        'taxonomy' => $query_taxo,
+        'taxonomy' => $query_taxonomy,
         'hide_empty' => false
       );
       $categories = get_categories($args);
-
+      
       foreach($categories as $category) : ?>
       <?php
         $image = get_field('image', 'term_' . $category->term_id);

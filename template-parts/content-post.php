@@ -175,7 +175,7 @@
   
   <div class="margin-box"></div>
   
-  <?php get_template_part( 'template-parts/global/post', 'related'); ?>
+  <?php get_template_part( 'template-parts/global/post', 'related', $args); ?>
 
   <div class="margin-box"></div>
 

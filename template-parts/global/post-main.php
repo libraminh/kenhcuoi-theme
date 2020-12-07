@@ -8,10 +8,7 @@
 
   <?php
     $tex = get_the_category();
-    if (empty($tex)) {
-      $last_word_url = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-      $post_type = get_post_type_object( $last_word_url );
-    }
+    $post_type = get_post_type_object(get_post_type());
     $cate_name = (!empty($tex)) ? $tex[0]->name : $post_type->labels->name;
   ?>
   <p class="home-showcase-wrap-title text-uppercase"><?php echo $cate_name; ?></p>

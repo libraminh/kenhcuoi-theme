@@ -17,7 +17,10 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 
-					get_template_part( 'template-parts/content', 'post', get_post_type() );
+					$args = array(
+						'name' => 'hihihi'
+					);
+					get_template_part( 'template-parts/content', 'post', $args );
 
 					the_post_navigation(
 						array(

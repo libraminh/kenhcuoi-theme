@@ -1,29 +1,26 @@
 <div class="post-video-showcase-tag">
-  <p class="post-video-showcase-tag-tags">
-    <i class="fa fa-tag social-icon-2" aria-hidden="true"></i>
-    <strong>Tags: </strong>
+  <?php
+    $current_tags = get_the_tags(get_the_ID());
+    if (!empty($current_tags)) :
+  ?>
+    <p class="post-video-showcase-tag-tags">
+      <i class="fa fa-tag social-icon-2" aria-hidden="true"></i>
+      <strong>Tags: </strong>
 
-    <?php
-      $current_tags = get_the_tags(get_the_ID());
-
-      if (!empty($current_tags)) :
-    ?>
-
-    <?php 
-      foreach($current_tags as $index=>$tag) { ?>
-        <a href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?>
-          <?php if ($index < count($current_tags) - 1) echo ', '; ?>
-        </a>
-      <?php }
-    ?>
-
-    <?php endif; ?>
-  </p>
+      <?php 
+        foreach($current_tags as $index=>$tag) { ?>
+          <a href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?>
+            <?php if ($index < count($current_tags) - 1) echo ', '; ?>
+          </a>
+        <?php }
+      ?>
+    </p>
+  <?php endif; ?>
 
   <div class="post-video-showcase-tag-wrap text-right">
     <span class="post-video-showcase-tag-social">
       <i class="fa fa-share-alt social-icon-2" aria-hidden="true"></i>
-      <strong>Share  </strong>
+      <strong>Share </strong>
     </span>
 
     <ul class="footer-social list-unstyled">
