@@ -6,6 +6,7 @@
  */
 
 get_header();
+require get_template_directory() . '/inc/utils/query-posts.php';
 require get_template_directory() . '/inc/query-posts-tax.php';
 ?>
       

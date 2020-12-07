@@ -5,10 +5,12 @@
         <?php 
           require get_template_directory() . '/inc/post-thumbnail-alt.php';
           $tex = get_the_category();
+          $post_type = get_post_type_object(get_post_type());
+          $cate_name = (!empty($tex)) ? $tex[0]->name : $post_type->labels->name;
         ?>
         <a href="<?php echo the_permalink(); ?>">
           <img style="height: 140px; object-fit: cover; object-position: center;" class="media-object" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
-          <p class="home-showcase-wrap-title text-uppercase"><?php echo $tex[0]->name ?></p>
+          <p class="home-showcase-wrap-title text-uppercase"><?php echo $cate_name; ?></p>
         </a>
       </div>
     </div>

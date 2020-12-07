@@ -16,10 +16,10 @@
   <div class="margin-box"></div>
 
   <?php
-    $the_query = setPostTerms('y_tuong_cuoi');
+    $the_query = queryPosts('ideas');
   ?>
   
-  <div class="home-showcase">           
+  <div class="home-showcase">
     <?php 
       $post_idx = 0; while ( $the_query->have_posts() ) :
       $the_query->the_post();

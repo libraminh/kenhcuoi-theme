@@ -7,14 +7,12 @@
   </a>
 
   <?php
-    $tex = get_the_category();
-    if (empty($tex)) {
-      $last_word_url = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-      $post_type = get_post_type_object( $last_word_url );
-    }
-    $cate_name = (!empty($tex)) ? $tex[0]->name : $post_type->labels->name;
+    $taxonomies = get_object_taxonomies(get_post_type(get_the_ID()));   
+    $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies);
+    $post_type_object = get_post_type_object(get_post_type());
+    $title = (!empty($taxonomy_names)) ? $taxonomy_names[0]->name : $post_type_object->labels->name;
   ?>
-  <p class="home-showcase-wrap-title text-uppercase"><?php echo $cate_name; ?></p>
+  <p class="home-showcase-wrap-title text-uppercase"><?php echo $title; ?></p>
   <a class="home-showcase-title text-uppercase" href="<?php the_permalink();?>">
     <h3><strong><?php the_title(); ?></strong></h3>
   </a>

@@ -1,17 +1,6 @@
 <?php 
-  $taxo_name = 'khuyen_mai';
-  $term = 'uncategorized';
-  $the_query = new WP_Query( array(
-    'post_type' => 'post',
-    'posts_per_page' => '8',
-    'tax_query' => array(
-      array(
-        'taxonomy' => $taxo_name,
-        'field' => 'slug',
-        'terms' => array('uncategorized'),
-      )
-    ),
-  ));
+  $query_post_type = 'promotion';
+  $the_query = queryPosts($query_post_type, 8);
 ?>
 
 <section class="home-promotion">
@@ -37,7 +26,7 @@
   </div>
   
   <div class="show-all">
-    <a href="<?php echo $taxo_name . '/' . $term; ?>">
+    <a href="<?php echo '/' . $query_post_type; ?>">
       <h5 class="text-uppercase">
         <strong>Xem Tất Cả</strong>
       </h5>

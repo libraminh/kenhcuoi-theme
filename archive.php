@@ -37,6 +37,7 @@ require('inc/custom-pagination.php');
 							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 							*/
 							// get_template_part( 'template-parts/content', get_post_type() );
+							
 							get_template_part( 'template-parts/global/post', 'list', get_post_type() );
 							$index_post++; endwhile; ?>
 				</div>

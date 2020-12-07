@@ -9,10 +9,16 @@
   </div>  
   
   <?php
-    $tex = get_the_category();
+    $post_type = get_post_type(get_the_ID());   
+    $taxonomies = get_object_taxonomies($post_type);   
+    $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies);
+    $post_type_object = get_post_type_object(get_post_type());
+    $title = (!empty($taxonomy_names)) ? $taxonomy_names[0]->name : $post_type_object->labels->name;
   ?>
   <div class="media-body">
-    <p class="media-title text-primary text-uppercase"><strong><?php echo $tex[0]->name ?></strong></p>
+    <p class="media-title text-primary text-uppercase">
+      <strong><?php echo $title ?></strong>
+    </p>
     <a href="<?php the_permalink();?>">
       <h4 class="media-heading text-uppercase"><strong><?php the_title(); ?></strong></h4>
     </a>

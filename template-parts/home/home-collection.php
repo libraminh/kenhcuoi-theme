@@ -16,7 +16,7 @@
   <div class="margin-box"></div>
 
   <?php
-    $the_query = setPostTerms('bo_suu_tap');
+    $the_query = queryPosts('collection');
   ?>
   
   <div class="home-showcase">           
