@@ -42,7 +42,7 @@
         <h4 class="text-uppercase home-video-title">
           <strong><?php the_title(); ?></strong>
         </h4>
-        <small class="home-showcase-date"><?php the_date('d . m . yy'); ?>  <span class="divine-2">|</span>112 Lượt xem</small>
+        <small class="home-showcase-date"><?php echo get_the_date('d . m . yy'); ?>  <span class="divine-2">|</span>112 Lượt xem</small>
       </div>
     </div>
 

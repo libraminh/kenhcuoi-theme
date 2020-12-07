@@ -34,7 +34,7 @@
         <a href="<?php the_permalink();?>">
           <h3 class="text-uppercase"><?php the_title();?></h3>
         </a>
-        <small class="home-showcase-date"><?php the_date('d . m . yy'); ?>  <span class="divine-2">|</span>112 Lượt xem</small>
+        <small class="home-showcase-date"><?php echo get_the_date('d . m . yy'); ?>  <span class="divine-2">|</span>112 Lượt xem</small>
       </div>
     </div>
 

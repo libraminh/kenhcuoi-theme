@@ -11,6 +11,6 @@
     <a href="<?php the_permalink();?>">
       <h4 class="media-heading text-uppercase"><?php the_title(); ?></h4>
     </a>
-    <small class="home-showcase-date"><?php the_date('d . m . yy'); ?> <span class="divine-2">|</span>112 Lượt xem</small>
+    <small class="home-showcase-date"><?php echo get_the_date('d . m . yy'); ?> <span class="divine-2">|</span>112 Lượt xem</small>
   </div>
 </div>

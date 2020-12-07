@@ -18,7 +18,7 @@
         <h4 class="media-heading text-uppercase"><strong><?php echo the_title(); ?></strong></h4>
       </a>
       <small class="home-showcase-date">
-        <?php the_date('M d, yy'); ?> 
+        <?php echo get_the_date('M d, yy'); ?> 
         <span class="divine-2">|</span>
         <?php if ( function_exists('wpp_get_views') ) echo wpp_get_views(get_the_ID()); ?>  Views
       </small>
