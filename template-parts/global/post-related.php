@@ -9,6 +9,7 @@
     <div class="margin-box-3"></div>
 
     <?php 
+      var_dump($args);
       $post_id = get_the_ID();
       $categories = wp_get_post_categories( $post_id );
       $current_post_type = get_post_type( $post_id );
