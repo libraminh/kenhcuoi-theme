@@ -44,10 +44,10 @@
 	<main id="primary" class="site-main">
 		<div class="home-wrap">
 			<?php 
-				get_template_part( 'template-parts/global/navbar');
+				get_template_part( 'template-parts/partials/navbar');
 				get_template_part( 'template-parts/home/home', 'masthead');
 
-				if ( !is_front_page() ) get_template_part( 'template-parts/global/masthead', 'global');
+				if ( !is_front_page() ) get_template_part( 'template-parts/partials/masthead', 'global');
 				get_template_part( 'template-parts/home/home', 'search');
-				if ( !is_front_page() ) get_template_part( 'template-parts/global/breadcrumb');
+				if ( !is_front_page() ) get_template_part( 'template-parts/partials/breadcrumb');
 			?>

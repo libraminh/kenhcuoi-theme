@@ -29,7 +29,7 @@
 
 			<div class="margin-box"></div>
 
-			<?php get_template_part( 'template-parts/global/footer', 'copyright'); ?>
+			<?php get_template_part( 'template-parts/partials/footer', 'copyright'); ?>
 		</footer>
 	</div>
 </main><!-- #main -->

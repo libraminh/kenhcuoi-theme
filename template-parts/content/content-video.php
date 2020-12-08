@@ -1,7 +1,7 @@
 <?php
   if ($GLOBALS['index_post'] == 1) { ?>
     <div class="col-md-12">
-      <?php get_template_part( 'template-parts/global/post', 'main', get_post_type() ); ?>
+      <?php get_template_part( 'template-parts/partials/post', 'main', get_post_type() ); ?>
     </div>
   <?php }
 ?>

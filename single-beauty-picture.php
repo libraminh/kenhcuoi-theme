@@ -16,7 +16,7 @@ get_header();
 			<?php
 				while ( have_posts() ) :
 					the_post();
-					get_template_part( 'template-parts/content/content', 'post' );
+					get_template_part( 'template-parts/content/content', 'picture' );
 
 					the_post_navigation(
 						array(

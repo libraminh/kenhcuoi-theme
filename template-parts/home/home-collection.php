@@ -8,7 +8,7 @@
 
     <div class="col-md-6 padding-off">
       <?php
-        get_template_part( 'template-parts/global/menu', 'tiny');
+        get_template_part( 'template-parts/partials/menu', 'tiny');
       ?>
     </div>
   </div>
@@ -16,7 +16,8 @@
   <div class="margin-box"></div>
 
   <?php
-    $the_query = queryPosts('collection');
+    $queryPostType = 'collection';
+    $the_query = queryPosts($queryPostType);
   ?>
   
   <div class="home-showcase">           
@@ -25,7 +26,7 @@
       $the_query->the_post();
       
       if ($post_idx > 0) continue;
-      get_template_part( 'template-parts/global/post', 'main');
+      get_template_part( 'template-parts/partials/post', 'main');
       $post_idx++;
       endwhile;
     ?>
@@ -41,7 +42,7 @@
       ?>
       <div class="col-md-6">
         <?php
-          get_template_part( 'template-parts/global/post', 'tiny-tag');
+          get_template_part( 'template-parts/partials/post', 'tiny-tag');
         ?>
       </div>
 
@@ -52,7 +53,7 @@
   <div class="margin-box"></div>
 
   <div class="show-all">
-    <a href="#">
+    <a href="/<?php echo $queryPostType; ?>">
       <h5 class="text-uppercase"><strong>Xem Tất Cả</strong></h5>
     </a>
   </div>

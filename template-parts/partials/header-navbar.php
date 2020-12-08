@@ -4,15 +4,28 @@
       <div class="row">
         <div class="col-md-5">
           <nav id="menu">
-            <!-- <?php
-              wp_nav_menu( array(
-                'theme_location'    => 'menu-1',
-                'depth'             => 2,
-                'menu_class'        => 'header-navbar-left header-navbar-left-1 list-unstyled text-uppercase',
-                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                'walker'            => new WP_Bootstrap_Navwalker(),
-              ) );
-            ?> -->
+
+            <?php 
+            add_filter('walker_nav_menu_start_el', 'muffin_walker_nav_menu_start_el', 10, 4);
+
+            function muffin_walker_nav_menu_start_el($item_output, $item, $depth, $args) {
+              if ($depth > 0) {
+                $item_output .= 'hihi';
+              }
+              $description_html = '<div class="menu-description">'.$item->description.'</div>';
+              return $item_output;
+            };
+
+          
+
+          wp_nav_menu( array(
+            'menu' => 'Menu Left',
+            'container' => 'nav',
+            'container_class' => 'nav',
+            'menu_class' => 'list',
+            'walker'     => new KenhCuoi_Nav(),
+          ));
+            ?>
 
             <ul class="header-navbar-left header-navbar-left-1 list-unstyled text-uppercase">
               <li><a href="index.html">Trang Chủ</a></li>
@@ -60,9 +73,11 @@
             </ul>
           </nav>
         </div>
+
         <div class="col-md-2 hidden-sm hidden-xs">
           <div class="header-navbar-brand"><a class="header-navbar-brand-btn" href="#"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/home/base_logo_2.svg" alt=""><img class="small-logo" src="<?php echo get_template_directory_uri(); ?>/img/home/logo.png" alt=""></a></div>
         </div>
+        
         <div class="col-md-5">
           <ul class="header-navbar-left list-unstyled text-uppercase">
             <li class="hidden-xs hidden-sm"><a href="post-list1.html">Ý Tưởng Cưới

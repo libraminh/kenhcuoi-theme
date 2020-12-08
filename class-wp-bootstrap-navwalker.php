@@ -64,7 +64,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 			}
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'header-navbar-left-sub list-unstyled' );
+			$classes = array( 'header-navbar-left-sub list-unstyled' ); // dropdown-menu 
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *

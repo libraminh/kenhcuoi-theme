@@ -22,7 +22,7 @@ require get_template_directory() . '/inc/query-posts-tax.php';
 
           <div class="margin-box"></div>
 
-          <?php get_template_part( 'template-parts/global/post', 'ads'); ?>
+          <?php get_template_part( 'template-parts/partials/post', 'ads'); ?>
 
           <div class="margin-box"></div>
 
@@ -30,7 +30,7 @@ require get_template_directory() . '/inc/query-posts-tax.php';
 
           <div class="margin-box"></div>
 
-          <?php get_template_part( 'template-parts/global/post', 'ads'); ?>
+          <?php get_template_part( 'template-parts/partials/post', 'ads'); ?>
 
           <div class="margin-box"></div>
 
@@ -54,7 +54,7 @@ require get_template_directory() . '/inc/query-posts-tax.php';
         </div>
 
         <div class="hidden-xs col-sm-4 col-md-4">
-          <?php get_template_part( 'template-parts/global/main', 'sidebar'); ?>
+          <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
         </div>
       </div>
 

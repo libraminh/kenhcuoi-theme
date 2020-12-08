@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Video Template
+ * Template Name: Picture Template
  * The template for single post
- * Template Post Type: post, video
+ * Template Post Type: beauty-picture
  */
 
 get_header();
@@ -15,7 +15,7 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 
-					get_template_part( 'template-parts/content/content', 'post', get_post_type() );
+					get_template_part( 'template-parts/content/content', 'picture' );
 
 					the_post_navigation(
 						array(

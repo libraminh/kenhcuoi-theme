@@ -6,18 +6,8 @@
   <div class="margin-box"></div>
 
   <?php
-    $the_query = new WP_Query( array(
-      'post_type' => 'post',
-      'posts_per_page' => 5,
-      'tax_query' => array(
-        'relation' => 'AND',
-        array(
-          'taxonomy' => 'category',
-          'field' => 'slug',
-          'terms' => 'anh_cuoi_dep'
-        )
-      ),
-    ));
+    $query_post_type = 'beauty-picture';
+    $the_query = queryPosts($query_post_type);
   ?>
 
   <div class="owl-carousel owl-theme home-gallery-carousel">
@@ -58,7 +48,7 @@
   <div class="margin-box"></div>
 
   <div class="show-all">
-    <a href="#">
+    <a href="/<?php echo $query_post_type; ?>">
       <h5 class="text-uppercase"><strong>Xem Tất Cả</strong></h5>
     </a>
   </div>

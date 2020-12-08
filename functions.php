@@ -212,9 +212,8 @@ if( function_exists('acf_add_options_page') ) {
  * Register Custom Navigation Walker
  */
 function register_navwalker(){
-	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+	require('inc/class-kenhcuoi-custom-nav.php');
 }
-
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 

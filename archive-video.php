@@ -38,7 +38,7 @@ require('inc/custom-pagination.php');
 							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
               */
               
-              get_template_part( 'template-parts/content', get_post_type() );
+              get_template_part( 'template-parts/content/content', get_post_type() );
               // get_template_part( 'template-parts/video/video', '-list' );
 							$index_post++; endwhile; ?>
 				  </div>
@@ -57,7 +57,7 @@ require('inc/custom-pagination.php');
 
 				else :
 
-				get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content/content', 'none' );
 
 				endif;
 				
@@ -65,7 +65,7 @@ require('inc/custom-pagination.php');
 			</div>
 
 			<div class="hidden-xs col-sm-4 col-md-4">
-				<?php get_template_part( 'template-parts/global/main', 'sidebar'); ?>
+				<?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
 			</div>
 		</div>
 	</div>

@@ -18,7 +18,7 @@ function post_share_shortcode() {
       <?php
         while ( $the_query->have_posts() ) :
         $the_query->the_post();
-        get_template_part( 'template-parts/global/post', 'aside');
+        get_template_part( 'template-parts/partials/post', 'aside');
         endwhile;
       ?> 
     </div> 

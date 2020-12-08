@@ -7,18 +7,8 @@
 
   <div class="row">
     <?php
-      $the_query = new WP_Query( array(
-        'post_type' => 'post',
-        'posts_per_page' => 5,
-        'tax_query' => array(
-          'relation' => 'AND',
-          array(
-            'taxonomy' => 'category',
-            'field' => 'slug',
-            'terms' => 'video-noi-bat'
-          )
-        ),
-      ));
+      $query_post_type = 'video';
+      $the_query = queryPosts($query_post_type);
     ?>
     
     <?php 
@@ -50,7 +40,7 @@
       <div class="row">
         <?php else : ?>
           <div class="col-md-12">
-            <?php get_template_part( 'template-parts/global/post', 'tiny-video'); ?>
+            <?php get_template_part( 'template-parts/partials/post', 'tiny-video'); ?>
           </div>
         <?php endif; ?>
         
@@ -60,7 +50,7 @@
   </div>
 
   <div class="show-all">
-    <a href="#">
+    <a href="/<?php echo $query_post_type;?>">
       <h5 class="text-uppercase"><strong>Xem Tất Cả</strong></h5>
     </a>
   </div>
