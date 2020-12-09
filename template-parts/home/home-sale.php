@@ -5,19 +5,19 @@
       $sale_post = get_field('sale_ad_post', $page_id);
     ?>
 
-    <?php if( have_rows('home_sales_repeater', 196) ): ?>
-    <?php while( have_rows('home_sales_repeater', 196) ): the_row(); 
-        $image = get_sub_field('image');
-        $link = get_sub_field('post');
-        ?>
-        <div class="col-xs-6 col-sm-3">
-          <div class="home-sale-box">
-            <a href="<?php echo $link['url'] ?>">
-              <img src="<?php echo $image['url']; ?>" alt="">
-            </a>
+    <?php if( have_rows('home_sales_repeater', 'option') ): ?>
+      <?php while( have_rows('home_sales_repeater', 'option') ): the_row(); 
+          $image = get_sub_field('image');
+          $link = get_sub_field('post');
+          ?>
+          <div class="col-xs-6 col-sm-3">
+            <div class="home-sale-box">
+              <a href="<?php echo $link['url'] ?>">
+                <img src="<?php echo $image['url']; ?>" alt="">
+              </a>
+            </div>
           </div>
-        </div>
-    <?php endwhile; ?>
+      <?php endwhile; ?>
     <?php endif; ?>
   </div>
 </section>

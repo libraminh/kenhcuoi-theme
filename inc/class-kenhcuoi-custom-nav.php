@@ -13,15 +13,7 @@
       // Default class.
       $classes = array( 'sub-menu header-navbar-left-sub list-unstyled' );
   
-      /**
-       * Filters the CSS class(es) applied to a menu list element.
-       *
-       * @since 4.8.0
-       *
-       * @param string[] $classes Array of the CSS classes that are applied to the menu `<ul>` element.
-       * @param stdClass $args    An object of `wp_nav_menu()` arguments.
-       * @param int      $depth   Depth of menu item. Used for padding.
-       */
+      // sub menu classes
       $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
       $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
   
@@ -29,48 +21,33 @@
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-      // if( 0 == $depth ) 
-      //   return;
+      $object = $item->object;
+    	$type = $item->type;
+    	$title = $item->title;
+    	$description = $item->description;
+      $permalink = $item->url;
 
-      array_push($item->classes, 'tada');
+      // get icon acf field
+      $menuIcon = get_field( 'icon', $item->ID );
 
-      
+      $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+      $classes[] = 'tada';
 
-      // $classes[] = 'tada';
-      
+      $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+      $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-      // // $output .= '<li>hhi</li>';
-      // $classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
+      $output .= $indent . '<li ' . $class_names . '>';
 
-      $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+      $output .= '<a href="' . $permalink . '">';
 
-      print_r($item_output);
-
+      // insert logo into submenu items
       if ($depth == 1) {
-        $output = '<li>hiHi</li>';
+        $output .= $indent . '<img class="icon-nav" src="' . $menuIcon['url'] .'" />';
       }
 
-      parent::start_el($output, $item, $depth, $args);
+      $output .= $title;
+
+      $output .= '</a>';
     }
-
-    // public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-		// 	if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-		// 		$t = '';
-		// 		$n = '';
-		// 	} else {
-		// 		$t = "\t";
-		// 		$n = "\n";
-		// 	}
-		// 	$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
-
-			
-
-		// 	// END appending the internal item contents to the output.
-		// 	// $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-    // }
-  
-
   }
-
-  
 ?>
