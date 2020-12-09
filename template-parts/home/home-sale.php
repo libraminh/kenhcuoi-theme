@@ -1,10 +1,5 @@
 <section class="home-sale">
   <div class="row">
-    <?php 
-      $page_id = get_queried_object_id();
-      $sale_post = get_field('sale_ad_post', $page_id);
-    ?>
-
     <?php if( have_rows('home_sales_repeater', 'option') ): ?>
       <?php while( have_rows('home_sales_repeater', 'option') ): the_row(); 
           $image = get_sub_field('image');
