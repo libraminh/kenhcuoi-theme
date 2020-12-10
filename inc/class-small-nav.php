@@ -1,5 +1,5 @@
 <?php 
-  class KenhCuoi_Nav_Walker extends Walker_Nav_Menu {
+  class KenhCuoi_Small_Nav_Walker extends Walker_Nav_Menu {
     public function start_lvl( &$output, $depth = 0, $args = null ) {
       if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
           $t = '';
@@ -11,7 +11,7 @@
       $indent = str_repeat( $t, $depth );
   
       // Default class.
-      $classes = array( 'sub-menu header-navbar-left-sub list-unstyled' );
+      $classes = array( 'dropdown-menu' );
   
       // sub menu classes
       $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
@@ -38,14 +38,24 @@
 
       $output .= $indent . '<li ' . $class_names . '>';
 
-      $output .= '<a href="' . $permalink . '">';
-
-      // insert logo into submenu items
-      if ($depth == 1) {
-        $output .= $indent . '<img class="icon-nav" src="' . $menuIcon['url'] .'" />';
+      if ($item->menu_order < 4) {
+        $output .= '<a href="' . $permalink . '">';
+      } elseif ($item->menu_order == 4) {
+        $output .= '
+          <a class="dropdown-toggle" href="' . $permalink . '" type="button" id="button-' . $item->ID . '" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="true"> 
+        ';
       }
 
-      $output .= $title;
+      if ($depth == 1) {
+        $output .= '<a href="' . $permalink . '">';
+      }
+
+      if ($item->menu_order == 4) {
+        $output .= $title . ' <i class="fa fa-angle-down" aria-hidden="true"></i>';
+      } else {
+        $output .= $title;
+      }
 
       $output .= '</a>';
     }

@@ -22,7 +22,7 @@
             </a>
           </div>
         </div>
-        
+
         <div class="col-md-5">
           <?php 
             wp_nav_menu( array(

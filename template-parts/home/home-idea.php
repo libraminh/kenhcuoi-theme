@@ -7,8 +7,12 @@
     </div>
 
     <div class="col-md-6 padding-off">
-      <?php
-        get_template_part( 'template-parts/partials/menu', 'tiny');
+      <?php 
+        $args = array(
+          'menu' => 'Menu Idea'
+        );
+
+        get_template_part( 'template-parts/partials/menu', 'tiny', $args);
       ?>
     </div>
   </div>
@@ -19,7 +23,7 @@
     $queryPostType = 'ideas';
     $the_query = queryPosts($queryPostType);
   ?>
-  
+
   <div class="home-showcase">
     <?php 
       $post_idx = 0; while ( $the_query->have_posts() ) :
@@ -30,7 +34,7 @@
       $post_idx++;
       endwhile;
     ?>
-    
+
     <div class="row">
       <?php 
         $post_idx = 0; while ( $the_query->have_posts() ) :

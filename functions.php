@@ -212,6 +212,7 @@ if( function_exists('acf_add_options_page') ) {
  * Register Custom Navigation Walker
  */
 function register_navwalker(){
+	require('inc/class-small-nav.php');
 	require('inc/class-kenhcuoi-custom-nav.php');
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
