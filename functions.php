@@ -223,6 +223,9 @@ add_action( 'after_setup_theme', 'register_navwalker' );
  */
 require get_template_directory() . '/inc/custom-header.php';
 
+// custom comment section
+require get_template_directory() . '/inc/comments-kenhcuoi.php';
+
 /**
  * Custom template tags for this theme.
  */
