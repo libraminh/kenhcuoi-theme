@@ -20,12 +20,14 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area post-video-showcase-comment">
+
 
   <?php
+	comment_form();
+
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
+	if ( have_comments() ) : ?>
   <h2 class="comments-title">
     <?php
 			$kenhcuoi_comment_count = get_comments_number();
@@ -46,10 +48,11 @@ if ( post_password_required() ) {
 			?>
   </h2><!-- .comments-title -->
 
-  <?php comment_form();?>
-  <?php the_comments_navigation(); ?>
 
-  <ol class="comment-list">
+  <?php the_comments_navigation();   ?>
+
+
+  <ol class="comment-list list-unstyled">
     <?php
 			wp_list_comments(
 				array(
@@ -65,15 +68,17 @@ if ( post_password_required() ) {
 		the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
+		if ( ! comments_open() ) : ?>
+
   <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'kenhcuoi' ); ?></p>
+
   <?php
 		endif;
 
 	endif; // Check for have_comments().
 
-	
-	?>
+
+
+  ?>
 
 </div><!-- #comments -->

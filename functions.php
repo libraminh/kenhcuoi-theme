@@ -249,7 +249,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
-
+add_filter( 'wpseo_remove_reply_to_com', '__return_false' );
 
 // show widget ID
 function awts_get_widget_id($widget_instance) {
