@@ -21,10 +21,44 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area post-video-showcase-comment">
+  <h1>Section Comment</h1>
 
+  <?php ob_start(); ?>
+  <div class="media">
+    <div class="media-left">
+      <?php echo get_avatar(
+				$comment, 
+				$size = '76', 
+				$default = 'https://imgix.bustle.com/uploads/image/2020/11/5/cbe5f6dc-a0d8-4b6a-bd01-350c0a3784a5-bluesus.png?w=350&h=298&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces',
+				$alt = 'avatar',
+				array( 'class' => array( 'media-object' ))
+		); ?>
+    </div>
+
+    <div class="media-body">
+      <div class="form-group">
+        <textarea class="form-control" id="comment" name="comment" placeholder="Viết Bình Luận..."
+          aria-required="true"></textarea>
+      </div>
+      <input name="submit" class="btn btn-accent text-uppercase" type="submit" id="submit-comment" value="Post comment">
+    </div>
+  </div>
+  <?php $content = ob_get_contents(); ob_end_clean(); ?>
 
   <?php
-	comment_form();
+	$comment_send = 'Đăng Nhận Xét';
+	$comment_field = $content;
+	
+	$args = array(
+		'fields' => array(),
+		'comment_field' => __( $comment_field ),
+		'comment_notes_after' => '',
+		'title_reply' => '<div class="crunchify-text"> <h5>Please Post Your Comments & Reviews</h5></div>',
+		'label_submit' => __( $comment_send ),
+		'submit_button' => ''
+		
+	);
+	comment_form($args);
 
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
@@ -48,10 +82,6 @@ if ( post_password_required() ) {
 			?>
   </h2><!-- .comments-title -->
 
-
-  <?php the_comments_navigation();   ?>
-
-
   <ol class="comment-list list-unstyled">
     <?php
 			wp_list_comments(
@@ -65,7 +95,7 @@ if ( post_password_required() ) {
   </ol><!-- .comment-list -->
 
   <?php
-		the_comments_navigation();
+		the_comments_pagination();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
@@ -73,12 +103,9 @@ if ( post_password_required() ) {
   <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'kenhcuoi' ); ?></p>
 
   <?php
-		endif;
-
+	endif;
+	
 	endif; // Check for have_comments().
-
-
-
   ?>
 
 </div><!-- #comments -->
