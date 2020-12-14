@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 				$default = 'https://imgix.bustle.com/uploads/image/2020/11/5/cbe5f6dc-a0d8-4b6a-bd01-350c0a3784a5-bluesus.png?w=350&h=298&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces',
 				$alt = 'avatar',
 				array( 'class' => array( 'media-object' ))
-		); ?>
+			); ?>
     </div>
 
     <div class="media-body">
@@ -50,12 +50,16 @@ if ( post_password_required() ) {
 	$comment_field = $content;
 	
 	$args = array(
-		'fields' => array(),
+		'fields' => array(
+			'cookies' => ''
+		),
 		'comment_field' => __( $comment_field ),
 		'comment_notes_after' => '',
-		'title_reply' => '<div class="crunchify-text"> <h5>Please Post Your Comments & Reviews</h5></div>',
+		'title_reply' => '',
 		'label_submit' => __( $comment_send ),
-		'submit_button' => ''
+		'submit_button' => '',
+		'comment_notes_before' => '',
+		'comment_notes_after' => '',
 		
 	);
 	comment_form($args);

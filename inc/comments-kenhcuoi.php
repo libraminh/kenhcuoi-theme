@@ -5,15 +5,15 @@ function better_comments($comment, $args, $depth) { ?>
 <div class="media">
   <div class="media-left">
     <?php
-        $defaultImage = 'https://imgix.bustle.com/uploads/image/2020/11/5/cbe5f6dc-a0d8-4b6a-bd01-350c0a3784a5-bluesus.png?w=350&h=298&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces';
-        
-        echo get_avatar(
-          $comment, 
-          $size = '76', 
-          $default = $defaultImage,
-          $alt = 'avatar',
-          array( 'class' => array( 'media-object' ))
-        ); ?>
+      $defaultImage = 'https://imgix.bustle.com/uploads/image/2020/11/5/cbe5f6dc-a0d8-4b6a-bd01-350c0a3784a5-bluesus.png?w=350&h=298&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces';
+      
+      echo get_avatar(
+        $comment, 
+        $size = '76', 
+        $default = $defaultImage,
+        $alt = 'avatar',
+        array( 'class' => array( 'media-object' ))
+      ); ?>
   </div>
 
   <div class="media-body">
