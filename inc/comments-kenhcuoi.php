@@ -12,7 +12,7 @@ function better_comments($comment, $args, $depth) { ?>
         $size = '76', 
         $default = $defaultImage,
         $alt = 'avatar',
-        array( 'class' => array( 'media-object' ))
+        array( 'class' => array( 'media-object object-fit object-center' ))
       ); ?>
   </div>
 
