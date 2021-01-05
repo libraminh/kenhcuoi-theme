@@ -18,13 +18,15 @@
     ?>
 
     <div class="item" data-hash="<?php the_ID(); ?>">
-      <img style="width: 100%; height: 460px; object-fit: cover; object-position: center;" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
+      <img style="width: 100%; height: 460px; object-fit: cover; object-position: center;"
+        src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
 
       <div class="home-gallery-carousel-content">
         <a href="<?php the_permalink();?>">
           <h3 class="text-uppercase"><?php the_title();?></h3>
         </a>
-        <small class="home-showcase-date"><?php echo get_the_date('d . m . yy'); ?>  <span class="divine-2">|</span>112 Lượt xem</small>
+        <small class="home-showcase-date"><?php echo get_the_date('d . m . yy'); ?> <span class="divine-2">|</span>
+          <?php if ( function_exists('wpp_get_views') ) echo wpp_get_views(get_the_ID()); ?> Lượt xem</small>
       </div>
     </div>
 
@@ -39,7 +41,8 @@
     ?>
     <div class="item">
       <a class="url" href="#<?php the_ID(); ?>">
-        <img style="height: 104px; width: 100%; object-fit: cover; object-position: center;" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
+        <img style="height: 104px; width: 100%; object-fit: cover; object-position: center;"
+          src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>">
       </a>
     </div>
     <?php endwhile; wp_reset_postdata(); ?>
