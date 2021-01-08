@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area post-video-showcase-comment">
-  <h1>Section Comment</h1>
+  <!-- <h1>Section Comment</h1> -->
 
   <?php ob_start(); ?>
   <div class="media">

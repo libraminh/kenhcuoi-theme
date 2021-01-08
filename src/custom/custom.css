@@ -1,6 +1,7 @@
 .home-gallery-carousel .item {
   position: relative;
 }
+
 .home-gallery-carousel .item::before {
   content: '';
   display: block;
@@ -12,6 +13,7 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
+
 .object-fit {
   -o-object-fit: cover;
   object-fit: cover;
@@ -20,4 +22,9 @@
 .object-center {
   -o-object-position: center;
   object-position: center;
+}
+
+.comments-title {
+  font-size: 20px;
+  line-height: 28px;
 }
