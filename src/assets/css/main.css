@@ -8005,7 +8005,7 @@ input {
 #service-detail-modal label {
   color: #e34963; }
 
-#service-detail-modal input, #service-detail-modal textarea {
+#service-detail-modal input:not([type="submit"]), #service-detail-modal textarea {
   background: #f9d5da;
   border: none;
   border-radius: 0;

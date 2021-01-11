@@ -28,3 +28,17 @@
   font-size: 20px;
   line-height: 28px;
 }
+
+.w-full { width: 100%; }
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox span.wpcf7-list-item {
+  margin: 0;
+}
+
+#service-detail-modal textarea {
+  padding: 10px;
+}
