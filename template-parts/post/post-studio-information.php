@@ -4,26 +4,30 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="<?php echo get_template_directory_uri(); ?>/img/promotion-detail/info.png"
-              alt="image">
+            <?php echo get_avatar(
+              $comment, 
+              $size = '76', 
+              $default = 'https://imgix.bustle.com/uploads/image/2020/11/5/cbe5f6dc-a0d8-4b6a-bd01-350c0a3784a5-bluesus.png?w=350&h=298&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces',
+              $alt = 'avatar',
+              array( 'class' => array( 'media-object object-fit object-center' ))
+            ); ?>
           </a>
         </div>
         <div class="media-body">
           <h5 class="media-heading text-uppercase">
-            <strong>MỘC THANH STUDIO</strong>
+            <strong><?php the_author(); ?></strong>
           </h5>
           <div class="margin-box-2 visible-sm visible-xs"></div>
           <ul class="list-unstyled">
             <li>
               <i class="fa fa-map-marker text-accent" aria-hidden="true"></i>
               <span>
-                45A Nguyễn Thông, Phường 7, Quận
-                3, Hồ Chí Minh
+                <?php the_field('address', 'user_' . get_current_user_id()); ?>
               </span>
             </li>
             <li>
               <i class="fa fa-phone text-accent" aria-hidden="true"></i>
-              <span> 028 3933 37 36 – 0934718668</span>
+              <span> <?php the_field('phone_number', 'user_' . get_current_user_id()); ?></span>
             </li>
           </ul>
         </div>
@@ -35,6 +39,5 @@
       </a>
     </div>
 
-    <?php get_template_part( 'template-parts/partials/price', 'quote-modal'); ?>
   </div>
 </div>

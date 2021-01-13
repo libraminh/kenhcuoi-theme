@@ -11,9 +11,9 @@ get_header();
 ?>
 
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-md-8">
-			<?php
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+      <?php
 				while ( have_posts() ) :
 					the_post();
 					get_template_part( 'template-parts/content/content', 'post' );
@@ -32,12 +32,12 @@ get_header();
 
 				endwhile; // End of the loop.
 			?>
-		</div>
-		
-		<div class="hidden-xs col-sm-4 col-md-4">
-			<?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
-		</div>
-	</div>
+    </div>
+
+    <div class="hidden-xs col-sm-4 col-md-4">
+      <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
+    </div>
+  </div>
 </div>
 
 <?php
