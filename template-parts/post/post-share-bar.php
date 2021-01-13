@@ -7,13 +7,11 @@
     <i class="fa fa-tag social-icon-2" aria-hidden="true"></i>
     <strong>Tags: </strong>
 
-    <?php 
-        foreach($current_tags as $index=>$tag) { ?>
+    <?php foreach($current_tags as $index=>$tag) : ?>
     <a href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?>
       <?php if ($index < count($current_tags) - 1) echo ', '; ?>
     </a>
-    <?php }
-      ?>
+    <?php endforeach; ?>
   </p>
   <?php endif; ?>
 
@@ -22,8 +20,6 @@
       <i class="fa fa-share-alt social-icon-2" aria-hidden="true"></i>
       <strong>Share </strong>
     </span>
-
-
 
     <ul class="footer-social list-unstyled addthis_sharing_toolbox" data-url="<?php the_permalink(); ?>"
       data-title="<?php the_title_attribute(); ?>">
