@@ -9,7 +9,9 @@
           </a>
         </div>
         <div class="media-body">
-          <h5 class="media-heading text-uppercase"><strong>MỘC THANH STUDIO</strong></h5>
+          <h5 class="media-heading text-uppercase">
+            <strong>MỘC THANH STUDIO</strong>
+          </h5>
           <div class="margin-box-2 visible-sm visible-xs"></div>
           <ul class="list-unstyled">
             <li>

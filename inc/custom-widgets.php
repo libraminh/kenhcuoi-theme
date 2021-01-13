@@ -37,15 +37,15 @@ class wpb_widget extends WP_Widget {
 
     echo '<div class="margin-box"></div>';
 
-    if ($show_link) :
-      echo '
-        <div class="show-all-1">
-          <a href="' . (!empty($link) ? $link : '#') . '">
-            <h5 class="text-uppercase"><strong>' . (!empty($link_title) ? $link_title : 'Xem Tất Cả') . '</strong></h5>
-          </a>
-        </div>
-      ';
-    endif;
+    // if ($show_link) :
+    //   echo '
+    //     <div class="show-all-1">
+    //       <a href="' . (!empty($link) ? $link : '#') . '">
+    //         <h5 class="text-uppercase"><strong>' . (!empty($link_title) ? $link_title : 'Xem Tất Cả') . '</strong></h5>
+    //       </a>
+    //     </div>
+    //   ';
+    // endif;
 
     echo '<div class="margin-box"></div>';
 
@@ -80,28 +80,35 @@ class wpb_widget extends WP_Widget {
     $link     = isset( $instance['link'] ) ? esc_attr( $instance['link'] ) : '';
     $show_link = isset( $instance['show_link'] ) ? (bool) $instance['show_link'] : true;
   ?>
-    <p>
-      <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-    </p>
-    <p>
-      <label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content:' ); ?></label> 
-      <textarea rows="3" class="widefat" id="<?php echo $this->get_field_id( 'content' ); ?>" name="<?php echo $this->get_field_name( 'content' ); ?>" value="<?php echo esc_attr( $content ); ?>" ><?php echo esc_attr( $content ); ?></textarea>
-    </p>
-    <p>
-      <label for="<?php echo $this->get_field_id( 'link_title' ); ?>"><?php _e( 'Link Title:' ); ?></label> 
-      <input class="widefat" id="<?php echo $this->get_field_id( 'link_title' ); ?>" name="<?php echo $this->get_field_name( 'link_title' ); ?>" value="<?php echo esc_attr( $link_title ); ?>" placeholder="<?php echo 'Xem Tất Cả'; ?>" />
-    </p>
-    <p>
-      <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link:' ); ?></label> 
-      <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" value="<?php echo esc_attr( $link ); ?>" placeholder="#" />
-    </p>
-    <p>
-      <input <?php checked( $show_link ); ?> type="checkbox" class="widefat" id="<?php echo $this->get_field_id( 'show_link' ); ?>" name="<?php echo $this->get_field_name( 'show_link' ); ?>" />
-      <label for="<?php echo $this->get_field_id( 'show_link' ); ?>"><?php _e( 'Show Link All:' ); ?></label> 
-    </p>
-     
-    <?php }
+<p>
+  <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+  <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+    name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+</p>
+<p>
+  <label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content:' ); ?></label>
+  <textarea rows="3" class="widefat" id="<?php echo $this->get_field_id( 'content' ); ?>"
+    name="<?php echo $this->get_field_name( 'content' ); ?>"
+    value="<?php echo esc_attr( $content ); ?>"><?php echo esc_attr( $content ); ?></textarea>
+</p>
+<p>
+  <label for="<?php echo $this->get_field_id( 'link_title' ); ?>"><?php _e( 'Link Title:' ); ?></label>
+  <input class="widefat" id="<?php echo $this->get_field_id( 'link_title' ); ?>"
+    name="<?php echo $this->get_field_name( 'link_title' ); ?>" value="<?php echo esc_attr( $link_title ); ?>"
+    placeholder="<?php echo 'Xem Tất Cả'; ?>" />
+</p>
+<p>
+  <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link:' ); ?></label>
+  <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>"
+    name="<?php echo $this->get_field_name( 'link' ); ?>" value="<?php echo esc_attr( $link ); ?>" placeholder="#" />
+</p>
+<p>
+  <input <?php checked( $show_link ); ?> type="checkbox" class="widefat"
+    id="<?php echo $this->get_field_id( 'show_link' ); ?>" name="<?php echo $this->get_field_name( 'show_link' ); ?>" />
+  <label for="<?php echo $this->get_field_id( 'show_link' ); ?>"><?php _e( 'Show Link All:' ); ?></label>
+</p>
+
+<?php }
   } 
      
   // Register and load the widget

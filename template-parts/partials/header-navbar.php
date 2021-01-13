@@ -16,7 +16,7 @@
 
         <div class="col-md-2 hidden-sm hidden-xs">
           <div class="header-navbar-brand">
-            <a class="header-navbar-brand-btn" href="#">
+            <a class="header-navbar-brand-btn" href="/">
               <img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/home/base_logo_2.svg" alt="">
               <img class="small-logo" src="<?php echo get_template_directory_uri(); ?>/img/home/logo.png" alt="">
             </a>
