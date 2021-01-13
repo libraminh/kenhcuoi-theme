@@ -3,7 +3,7 @@
     <div class="col-md-9">
       <div class="media">
         <div class="media-left">
-          <a href="#">
+          <a href="<?php echo get_author_posts_url( get_current_user_id() ); ?>">
             <?php echo get_avatar(
               $comment, 
               $size = '76', 
