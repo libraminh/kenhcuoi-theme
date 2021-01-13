@@ -42,3 +42,67 @@
 #service-detail-modal textarea {
   padding: 10px;
 }
+
+.nav-links .page-numbers {
+  color: #333;
+  margin-right: 10px;
+  font-weight: 500;
+  transition: color .2s ease-in-out;
+}
+
+.nav-links .current {
+  color: #ab132d;
+}
+
+.nav-links .page-numbers:hover {
+  color: #ab132d;
+}
+
+.logged-in-as a {
+  color: #333;
+  font-weight: 500;
+}
+
+.logged-in-as a:last-child {
+  color: #ab132d;
+}
+
+footer.entry-footer {
+  color: #333;
+  font-weight: 500;
+}
+
+footer.entry-footer {
+  margin-bottom: 10px;
+}
+
+span.tags-links {
+  display: block;
+}
+
+footer.entry-footer a {
+  color: #ab132d;
+}
+
+nav.navigation.post-navigation a {
+  color: #333;
+  font-weight: 500;
+}
+
+nav.navigation.post-navigation .nav-title {
+  color: #ab132d;
+}
+
+.navigation.post-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.edit-link {
+  display: block;
+}
+
+.promotion-detail .post-video-showcase-relate img {
+  width: 100% !important;
+}
