@@ -1,3 +1,7 @@
+:root {
+  --red-700: #ab132d;
+}
+
 .home-gallery-carousel .item {
   position: relative;
 }
@@ -51,11 +55,11 @@
 }
 
 .nav-links .current {
-  color: #ab132d;
+  color: var(--red-700);
 }
 
 .nav-links .page-numbers:hover {
-  color: #ab132d;
+  color: var(--red-700);
 }
 
 .logged-in-as a {
@@ -64,7 +68,7 @@
 }
 
 .logged-in-as a:last-child {
-  color: #ab132d;
+  color: var(--red-700);
 }
 
 footer.entry-footer {
@@ -81,7 +85,7 @@ span.tags-links {
 }
 
 footer.entry-footer a {
-  color: #ab132d;
+  color: var(--red-700);
 }
 
 nav.navigation.post-navigation a {
@@ -90,7 +94,8 @@ nav.navigation.post-navigation a {
 }
 
 nav.navigation.post-navigation .nav-title {
-  color: #ab132d;
+  color: var(--red-700);
+  font-weight: 700;
 }
 
 .navigation.post-navigation .nav-links {
