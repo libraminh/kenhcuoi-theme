@@ -62,11 +62,10 @@ get_header();
 				?>
 
       </div>
+    </div>
 
-      <div class="hidden-xs col-sm-4 col-md-4">
-        <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
-      </div>
-
+    <div class="hidden-xs col-sm-4 col-md-4">
+      <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
     </div>
   </div>
 
