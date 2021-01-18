@@ -60,17 +60,16 @@ get_header();
 
 				endif;
 				?>
+
+      </div>
+
+      <div class="hidden-xs col-sm-4 col-md-4">
+        <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
       </div>
 
     </div>
-
-    <div class="hidden-xs col-sm-4 col-md-4">
-      <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
-    </div>
-
   </div>
-</div>
 
-<?php
+  <?php
 // get_sidebar();
 get_footer();
