@@ -8,24 +8,22 @@
  */
 
 get_header();
-
-require('inc/custom-pagination.php');
 ?>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-8 col-md-8">
-				<?php if ( have_posts() ) : ?>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+      <?php if ( have_posts() ) : ?>
 
-				<!-- <header class="">
+      <!-- <header class="">
 					<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 					?>
 				</header> -->
-				<!-- .page-header -->
+      <!-- .page-header -->
 
-				<div class="home-showcase">
-					<?php
+      <div class="home-showcase">
+        <?php
 						/* Start the Loop */
 						$index_post = 1;
 						while ( have_posts() ) :
@@ -40,9 +38,9 @@ require('inc/custom-pagination.php');
 							
 							get_template_part( 'template-parts/partials/post', 'list', get_post_type() );
 							$index_post++; endwhile; ?>
-				</div>
+      </div>
 
-				<?php
+      <?php
 				// the_posts_navigation();
 				$pagination_args = array(
 					'class' => 'pagination-wrap text-center',
@@ -60,13 +58,13 @@ require('inc/custom-pagination.php');
 				endif;
 				
 				?>
-			</div>
+    </div>
 
-			<div class="hidden-xs col-sm-4 col-md-4">
-				<?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
-			</div>
-		</div>
-	</div>
+    <div class="hidden-xs col-sm-4 col-md-4">
+      <?php get_template_part( 'template-parts/partials/main', 'sidebar'); ?>
+    </div>
+  </div>
+</div>
 
 <?php
 // get_sidebar();

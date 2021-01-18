@@ -111,3 +111,7 @@ nav.navigation.post-navigation .nav-title {
 .promotion-detail .post-video-showcase-relate img {
   width: 100% !important;
 }
+
+.mt-0 {
+  margin-top: 0 !important;
+}

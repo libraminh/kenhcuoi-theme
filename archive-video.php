@@ -8,8 +8,6 @@
  */
 
 get_header();
-
-require('inc/custom-pagination.php');
 ?>
 <div class="container">
   <div class="row">
