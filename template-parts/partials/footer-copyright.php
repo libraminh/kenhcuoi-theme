@@ -10,13 +10,13 @@
 
       <div class="col-sm-12 col-md-6 text-right">
         <?php 
-            wp_nav_menu( array(
-              'menu' => 'Footer Menu',
-              'container' => 'nav',
-              'container_class' => 'nav',
-              'menu_class' => 'copyright-nav list-unstyled text-uppercase',
-            ));
-          ?>
+          wp_nav_menu( array(
+            'menu' => 'Footer Menu',
+            'container' => 'nav',
+            'container_class' => 'nav',
+            'menu_class' => 'copyright-nav list-unstyled text-uppercase',
+          ));
+        ?>
       </div>
 
     </div>

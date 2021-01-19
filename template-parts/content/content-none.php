@@ -45,9 +45,8 @@
       <?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kenhcuoi' ); ?>
     </p>
     <?php
-						get_search_form();
-
-					endif;
-					?>
+			get_search_form();
+			endif;
+		?>
   </div><!-- .page-content -->
 </section><!-- .no-results -->

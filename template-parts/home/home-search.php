@@ -19,11 +19,15 @@
           <h4 class="home-search-wrap-title text-accent">TÌM KIẾM <strong>BÀI VIẾT</strong></h4>
         </div>
 
-        <form action="<?php echo esc_url( home_url() ); ?>" method="GET" role="search">
+        <div class="col-md-9 col">
+          <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+        </div>
+
+        <!-- <form action="<?php echo esc_url( home_url() ); ?>" method="GET" role="search">
           <div class="col-md-5 col">
 
             <div class="form-group">
-              <!-- <input class="form-control" type="text" placeholder="Nhập từ khóa..."> -->
+              <input class="form-control" type="text" placeholder="Nhập từ khóa...">
               <input class="form-control" name="s" id="search" type="text" value="<?php the_search_query(); ?>"
                 placeholder="Nhập từ khóa...">
             </div>
@@ -43,7 +47,7 @@
             </div>
           </div>
 
-          <!-- <div class="col-md-2 col">
+          <div class="col-md-2 col">
             <form>
               <div class="form-group">
                 <select class="selectpicker form-control" title="Chọn khu vực">
@@ -53,12 +57,13 @@
                 </select>
               </div>
             </form>
-          </div> -->
+          </div>
 
           <div class="col-md-2 col">
             <button type="submit" class="btn btn-accent text-uppercase w-full">Tìm Ngay</button>
           </div>
-        </form>
+        </form> -->
+
       </div>
     </div>
   </div>
