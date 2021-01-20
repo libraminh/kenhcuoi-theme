@@ -4,7 +4,9 @@
       $post_types = get_post_types( array(
         'public' => true,
       ) );
+      // var_dump($post_types);
       unset($post_types['page']);
+      unset($post_types['product']);
       $perPage = 5;
       $args = array(
         'post_type' => $post_types,

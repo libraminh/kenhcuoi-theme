@@ -277,3 +277,8 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 require('inc/custom-pagination.php');
+
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
