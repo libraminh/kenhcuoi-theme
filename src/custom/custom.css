@@ -1,5 +1,17 @@
 :root {
   --red-700: #ab132d;
+  --gray-700: #555555;
+}
+
+.btn--red,
+.add_to_cart_button {
+  background: var(--red-700) !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+}
+
+.onsale {
+  background: var(--red-700) !important;
 }
 
 .home-gallery-carousel .item {
@@ -114,4 +126,37 @@ nav.navigation.post-navigation .nav-title {
 
 .mt-0 {
   margin-top: 0 !important;
+}
+
+body .text-18 {
+  font-size: 18px;
+}
+
+.price {
+  font-size: 12px !important;
+  color: #777 !important;
+}
+
+.price ins {
+  text-decoration: none;
+}
+
+.price ins .woocommerce-Price-amount.amount {
+  color: var(--red-700);
+  font-size: 16px;
+  margin-left: 5px
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+a.added_to_cart.wc-forward {
+  color: var(--gray-700);
+  font-weight: 600;
+  margin-left: 15px;
 }

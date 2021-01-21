@@ -175,8 +175,8 @@ function kenhcuoi_scripts() {
 
 	// styles
 	wp_enqueue_style( 'kenhcuoi-main', get_template_directory_uri() . '/src/assets/css/main.css', array(), _S_VERSION);
-	wp_enqueue_style( 'kenhcuoi-custom', get_template_directory_uri() . '/src/custom/custom.css', array(), _S_VERSION);
 	wp_enqueue_style( 'kenhcuoi-mmenu', get_template_directory_uri() . '/src/assets/css/0-tools/mmenu/jquery.mmenu.all.css', array(), _S_VERSION);
+	wp_enqueue_style( 'kenhcuoi-custom', get_template_directory_uri() . '/src/custom/custom.css', array(), _S_VERSION);
 
 	// scripts
 	wp_enqueue_script( 'kenhcuoi-jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array('jquery'), _S_VERSION, true );
@@ -278,7 +278,21 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 require('inc/custom-pagination.php');
 
+// woocommerce tweaks
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+// handle product title
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+if ( ! function_exists( 'list_product_title' ) ) {
+	function list_product_title() { 
+		echo '<h5 class="woocommerce-loop-product__title media-heading text-uppercase text-18 mb-10">' . get_the_title() . '</h5>'; 
+	}
+}
+add_action( 'woocommerce_shop_loop_item_title', 'list_product_title', 10 );
+
+// handle add to cart
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_loop_add_to_cart', 30 );
