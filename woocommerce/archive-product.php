@@ -62,7 +62,7 @@ if ( woocommerce_product_loop() ) {
 
 	// woocommerce_product_loop_start();
 
-	echo '<div class="row home-promotion" style="clear: both">';
+	echo '<div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-10 home-promotion clear-both">';
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
