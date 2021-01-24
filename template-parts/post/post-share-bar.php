@@ -15,13 +15,15 @@
   </p>
   <?php endif; ?>
 
-  <div class="post-video-showcase-tag-wrap text-right">
+  <div class="post-video-showcase-tag-wrap text-right flex items-center">
     <span class="post-video-showcase-tag-social">
       <i class="fa fa-share-alt social-icon-2" aria-hidden="true"></i>
       <strong>Share </strong>
     </span>
 
-    <ul class="footer-social list-unstyled addthis_sharing_toolbox" data-url="<?php the_permalink(); ?>"
+    <?php echo do_shortcode('[TheChamp-Sharing]') ?>
+
+    <!-- <ul class="footer-social list-unstyled addthis_sharing_toolbox" data-url="<?php the_permalink(); ?>"
       data-title="<?php the_title_attribute(); ?>">
       <li>
         <a href="javascript:void(0)" class="addthis_button_facebook"><i class="fa fa-facebook" aria-hidden="true">
@@ -35,7 +37,8 @@
         <a href="javascript:void(0)" class="addthis_button_linkedin"><i class="fa fa-google-plus" aria-hidden="true">
           </i></a>
       </li>
-    </ul>
+    </ul> -->
+
   </div>
 </div>
 
